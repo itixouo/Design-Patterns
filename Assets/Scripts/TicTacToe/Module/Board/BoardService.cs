@@ -20,7 +20,6 @@ public class BoardService
         {
             if (_instance == null)
                 _instance = new BoardService();
-            Debug.Log(_instance == null);
             return _instance;
         }
     }

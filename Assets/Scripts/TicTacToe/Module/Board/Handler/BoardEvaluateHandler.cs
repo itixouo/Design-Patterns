@@ -53,24 +53,22 @@ public class BoardEvaluateHandler
 
         for (int i = 0; i < width; i++)
         {
-            if (slot[i, 0] == slot[i, 1] && slot[i, 0] == slot[i, 2])
+            if (slot[i, 0] != 0 && slot[i, 0] == slot[i, 1] && slot[i, 0] == slot[i, 2])
             {
-                Debug.Log($"{slot[i, 0]}:{slot[i, 1]}:{slot[i, 2]}");
                 return slot[i, 0];
             }
                 
-            if (slot[0, i] == slot[1, i] && slot[0, i] == slot[2, i])
+            if (slot[0, i] != 0 && slot[0, i] == slot[1, i] && slot[0, i] == slot[2, i])
             {
-                Debug.Log($"{slot[0, i]}:{slot[1, i]}:{slot[2, i]}");
                 return slot[0, i];
             }
                 
         }
 
-        if (slot[1, 1] == slot[0, 0] && slot[1, 1] == slot[2, 2])
+        if (slot[1, 1] != 0 && slot[1, 1] == slot[0, 0] && slot[1, 1] == slot[2, 2])
             return slot[1, 1];
 
-        if (slot[1, 1] == slot[0, 2] && slot[1, 1] == slot[2, 0])
+        if (slot[1, 1] != 0 && slot[1, 1] == slot[0, 2] && slot[1, 1] == slot[2, 0])
             return slot[1, 1];
 
         return 0;

@@ -23,7 +23,6 @@ public class BoardMoveHandler
 
     public void OnSelectSlot(int x , int y , int index)
     {
-        Debug.Log($"{x}:{y}");
         int turn = BoardService.Instance.Turn;
         _view.InputButtons[index].interactable = false;
         _view.SetColor(index, turn == 1 ? Color.red : Color.blue);
